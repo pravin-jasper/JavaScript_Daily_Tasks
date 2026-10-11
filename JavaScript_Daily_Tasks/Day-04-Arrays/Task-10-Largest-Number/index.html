@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Task 10 - Largest Number</title>
+
+</head>
+
+
+<body>
+
+    <h1>Task 10 - Largest Number</h1>
+
+
+
+<script>
+        const numbers = [25, 67, 12, 89, 45];
+
+        let largest = numbers[0];
+
+        for (let i = 1; i < numbers.length; i++) {
+
+            if (numbers[i] > largest) {
+
+                largest = numbers[i];
+
+            }
+
+        }
+
+       document.write("Array:", numbers);
+
+       document.write("<br>");
+
+       document.write("Largest Number:", largest);
+</script>
+
+</body>
+
+</html>
