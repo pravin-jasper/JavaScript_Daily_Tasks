@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task 11 - Count Occurrences</title>
+
+</head>
+
+
+<body>
+
+    <h1>Count Occurrences in an Array</h1>
+
+  
+
+
+    <script >
+  
+
+        const numbers = [10, 20, 10, 30, 10, 40, 20];
+
+
+
+
+        const searchNumber = 10;
+
+
+
+        let count = 0;
+
+
+
+        for (let i = 0; i < numbers.length; i++) {
+
+            if (numbers[i] === searchNumber) {
+
+                count++;
+
+            }
+
+        }
+
+
+
+
+        document.write("Array:", numbers);
+        document.write("<br>");
+
+        document.write("Number:", searchNumber);
+        document.write("<br>");
+        document.write("Occurrences:", count);
+    </script>
+
+</body>
+
+</html>
