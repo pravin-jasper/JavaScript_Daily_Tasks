@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+
+<body>
+
+    <center>
+        <br>
+    <h1>JavaScript Array Map Methods</h1>
+
+    <h2>Task 1 - Convert Numbers to Strings</h2>
+
+    <p id="task1"></p>
+
+
+    <h2>Task 2 - Add Index to Values</h2>
+
+    <p id="task2"></p>
+
+
+    <h2>Task 3 - Capitalize First Letter</h2>
+
+    <p id="task3"></p>
+
+
+    <h2>Task 4 - Map with Conditional Logic</h2>
+
+    <p id="task4"></p>
+
+
+    <h2>Task 5 - Format Numbers with Currency Symbol</h2>
+
+    <p id="task5"></p>
+
+
+    <script>
+        
+    const nums = [1, 2, 3];
+
+    const stringNumbers = nums.map(function (num) {
+        return String(num);
+    });
+
+    document.getElementById("task1").innerHTML =
+        stringNumbers.join(", ");
+
+
+    const arr = ["a", "b", "c"];
+
+    const indexValues = arr.map(function (value, index) {
+        return value + index;
+    });
+
+    document.getElementById("task2").innerHTML =
+        indexValues.join(", ");
+
+
+    const words = ["apple", "banana"];
+
+    const capitalizedWords = words.map(function (word) {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+    });
+
+    document.getElementById("task3").innerHTML =
+        capitalizedWords.join(", ");
+
+
+    const scores = [90, 45, 75, 30];
+
+    const results = scores.map(function (score) {
+
+        if (score >= 40) {
+            return "pass";
+        } else {
+            return "fail";
+        }
+
+    });
+
+    document.getElementById("task4").innerHTML =
+        results.join(", ");
+
+
+    const prices = [50, 100];
+
+    const formattedPrices = prices.map(function (price) {
+        return "$" + price;
+    });
+
+    document.getElementById("task5").innerHTML =
+        formattedPrices.join(", ");
+    </script>
+
+</body>
+
+</html>
