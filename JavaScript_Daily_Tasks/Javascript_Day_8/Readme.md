@@ -136,8 +136,4 @@ Grade: A Grade
 
 ---
 
-## 👨‍💻 Author
 
-**Praveen Kumar**
-
-JavaScript Daily Tasks – Day 08
