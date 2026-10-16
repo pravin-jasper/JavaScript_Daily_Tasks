@@ -53,15 +53,7 @@ Please enter all marks
 
 is displayed.
 
-### 📊 Result Calculation
 
-<img width="595" height="620" alt="Output_1" src="https://github.com/user-attachments/assets/abb7ae0f-b770-4657-902f-f00903116b53" />
-
-<img width="641" height="658" alt="Output_2" src="https://github.com/user-attachments/assets/d83410aa-f393-4ba4-a99a-7b8ed78f6cdf" />
-
-<img width="560" height="656" alt="Output_3" src="https://github.com/user-attachments/assets/7ce4fa95-3273-4b47-bd0b-3668d76cd032" />
-
-The total is calculated as:
 
 ```text
 Total = Subject 1 + Subject 2 + Subject 3 + Subject 4 + Subject 5
