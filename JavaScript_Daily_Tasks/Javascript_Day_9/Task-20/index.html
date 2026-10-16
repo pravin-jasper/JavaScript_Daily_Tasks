@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Search</title>
+</head>
+
+<body>
+    <center><br><br>
+
+    <h1>Employee Search</h1>
+
+    <input   type="text"    id="search"      placeholder="Enter employee name"  >
+
+    <button onclick="searchEmployee()">Search</button>
+
+    <div id="output"></div>
+
+    <script >
+        let employees = [
+
+    {
+        name: "Jasper",
+        department: "Development",
+        salary: 30000
+    },
+
+    {
+        name: "Vidhya",
+        department: "Testing",
+        salary: 28000
+    },
+
+    {
+        name: "Durai",
+        department: "Design",
+        salary: 32000
+    },
+
+    {
+        name: "Vijay",
+        department: "Marketing",
+        salary: 35000
+    }
+
+];
+
+
+function searchEmployee() {
+
+    let searchValue =
+        document.getElementById("search").value.toLowerCase();
+
+    let output =
+        document.getElementById("output");
+
+    let found = false;
+
+    for (let i = 0; i < employees.length; i++) {
+
+        if (employees[i].name.toLowerCase() === searchValue) {
+
+            output.innerHTML =
+                "<h2>Employee Found</h2>" +
+                "<p>Name: " + employees[i].name + "</p>" +
+                "<p>Department: " + employees[i].department + "</p>" +
+                "<p>Salary: ₹" + employees[i].salary + "</p>";
+
+            found = true;
+
+            break;
+        }
+    }
+
+
+    if (found === false) {
+
+        output.innerHTML =
+            "<h2>Employee Not Found</h2>" +
+            "<p>Please enter a valid employee name.</p>";
+    }
+}
+    </script>
+
+</body>
+
+</html>
