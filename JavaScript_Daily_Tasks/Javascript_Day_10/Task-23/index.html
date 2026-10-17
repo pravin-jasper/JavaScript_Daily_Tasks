@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Result Board</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eef2ff;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            text-align: center;
+        }
+
+        h1 {
+            color: #312e81;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #64748b;
+            margin-bottom: 25px;
+        }
+
+        button {
+            padding: 14px 28px;
+            border: none;
+            border-radius: 10px;
+            background: #7c3aed;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #6d28d9;
+        }
+
+        #output {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(230px, 1fr)
+                );
+
+            gap: 25px;
+
+            margin-top: 40px;
+        }
+
+        .card {
+
+            background: white;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+
+            text-align: left;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .card img {
+
+            width: 100%;
+
+            height: 210px;
+
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content h2 {
+
+            margin-top: 0;
+
+            color: #1e1b4b;
+        }
+
+        .mark {
+
+            font-size: 24px;
+
+            font-weight: bold;
+
+            color: #7c3aed;
+        }
+
+        .result {
+
+            display: inline-block;
+
+            padding: 7px 14px;
+
+            border-radius: 20px;
+
+            background: #ede9fe;
+
+            color: #6d28d9;
+
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="container">
+
+        <h1>🎓 Student Result Board</h1>
+
+        <p class="subtitle">
+            Student performance using JavaScript Map
+        </p>
+
+        <button onclick="showResults()">
+            View Student Results
+        </button>
+
+        <div id="output"></div>
+
+    </div>
+
+
+    <script>
+        let students = [
+
+    {
+        name: "Jasper",
+        mark: 90,
+        image: "https://images.pexels.com/photos/5212323/pexels-photo-5212323.jpeg"
+    },
+
+    {
+        name: "Vidhya",
+        mark: 75,
+        image: "https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg"
+    },
+
+    {
+        name: "Karthik",
+        mark: 60,
+        image: "https://images.pexels.com/photos/5212323/pexels-photo-5212323.jpeg"
+    },
+
+    {
+        name: "Pravin",
+        mark: 40,
+        image: "https://images.pexels.com/photos/5905710/pexels-photo-5905710.jpeg"
+    },
+
+];
+
+
+function showResults() {
+
+
+    let output =
+        document.getElementById("output");
+
+
+    let results = students.map(function(student) {
+
+
+        let result;
+
+
+        if (student.mark >= 90) {
+
+            result = "Excellent";
+
+        }
+
+        else if (student.mark >= 75) {
+
+            result = "Very Good";
+
+        }
+
+        else if (student.mark >= 60) {
+
+            result = "Good";
+
+        }
+
+        else if (student.mark >= 35) {
+
+            result = "Pass";
+
+        }
+
+        else {
+
+            result = "Fail";
+        }
+
+
+        return {
+
+            name: student.name,
+
+            mark: student.mark,
+
+            result: result,
+
+            image: student.image
+
+        };
+
+    });
+
+
+    output.innerHTML = "";
+
+
+    for (let i = 0; i < results.length; i++) {
+
+
+        output.innerHTML +=
+
+            '<div class="card">' +
+
+                '<img src="' +
+                results[i].image +
+                '" alt="' +
+                results[i].name +
+                '">' +
+
+                '<div class="content">' +
+
+                    '<h2>' +
+                    results[i].name +
+                    '</h2>' +
+
+                    '<p class="mark">' +
+                    results[i].mark +
+                    ' / 100' +
+                    '</p>' +
+
+                    '<p>' +
+                    'Performance' +
+                    '</p>' +
+
+                    '<span class="result">' +
+                    results[i].result +
+                    '</span>' +
+
+                '</div>' +
+
+            '</div>';
+    }
+}
+    </script>
+
+</body>
+
+</html>
