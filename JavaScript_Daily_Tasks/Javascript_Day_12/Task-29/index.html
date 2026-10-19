@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="bg-white w-96 p-6 rounded-lg shadow">
+    <h1 class="text-2xl font-bold text-center mb-5">Registration Form</h1>
+    <form id="form">
+      <label>Name</label>
+      <input type="text" id="name" class="border p-2 rounded w-full mb-1" placeholder="Enter your name">
+      <p id="nameError" class="text-red-500 text-sm mb-3"></p>
+      <!-- Email Validation-->
+      <label>Email</label>
+      <input  type="text" id="email" class="border p-2 rounded w-full mb-1" placeholder="Enter your email">
+      <p id="emailError" class="text-red-500 text-sm mb-3"></p>
+      <!-- Phone Validation-->
+      <label>Phone</label>
+      <input type="text" id="phone" class="border p-2 rounded w-full mb-1" placeholder="10 digit phone number">
+      <p id="phoneError" class="text-red-500 text-sm mb-3"></p>
+      <label>Age</label>
+      <input type="number" id="age" class="border p-2 rounded w-full mb-1" placeholder="Enter your age">
+      <p id="ageError" class="text-red-500 text-sm mb-3"></p>
+      <!-- Password Validation-->
+      <label>Password</label>
+      <input type="password" id="password" class="border p-2 rounded w-full mb-1" placeholder="Enter password">
+      <p id="passwordError" class="text-red-500 text-sm mb-3"></p>
+      <!-- Confirm Password  Validation-->
+      <label>Confirm Password</label>
+      <input  type="password" id="confirmPassword" class="border p-2 rounded w-full mb-1" placeholder="Confirm password">
+      <p id="confirmPasswordError" class="text-red-500 text-sm mb-3"></p>
+      <button type="submit" class="bg-blue-500 text-white w-full py-2 rounded">Register</button>
+    </form>
+  </div>
+  <script>
+    const form = document.querySelector("#form");
+
+const name = document.querySelector("#name");
+const email = document.querySelector("#email");
+const phone = document.querySelector("#phone");
+const age = document.querySelector("#age");
+const password = document.querySelector("#password");
+const confirmPassword = document.querySelector("#confirmPassword");
+
+form.addEventListener("submit", (event) => {
+
+  event.preventDefault();
+
+  let valid = true;
+
+
+  // Name Validation
+  if (name.value.trim() === "") {
+    document.querySelector("#nameError").textContent =
+      "Name is required";
+
+    valid = false;
+
+  } else if (name.value.trim().length < 3) {
+    document.querySelector("#nameError").textContent =
+      "Name must be at least 3 characters";
+
+    valid = false;
+
+  } else {
+    document.querySelector("#nameError").textContent = "";
+  }
+
+
+  // Email Validation
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (email.value.trim() === "") {
+
+    document.querySelector("#emailError").textContent =
+      "Email is required";
+
+    valid = false;
+
+  } else if (!emailPattern.test(email.value)) {
+
+    document.querySelector("#emailError").textContent =
+      "Enter a valid email";
+
+    valid = false;
+
+  } else {
+
+    document.querySelector("#emailError").textContent = "";
+  }
+
+
+  // Phone Validation
+  const phonePattern = /^[0-9]{10}$/;
+
+  if (phone.value.trim() === "") {
+
+    document.querySelector("#phoneError").textContent =
+      "Phone number is required";
+
+    valid = false;
+
+  } else if (!phonePattern.test(phone.value)) {
+
+    document.querySelector("#phoneError").textContent =
+      "Phone must contain 10 digits";
+
+    valid = false;
+
+  } else {
+
+    document.querySelector("#phoneError").textContent = "";
+  }
+
+
+  // Age Validation
+  if (age.value === "") {
+
+    document.querySelector("#ageError").textContent =
+      "Age is required";
+
+    valid = false;
+
+  } else if (age.value < 18) {
+
+    document.querySelector("#ageError").textContent =
+      "Age must be 18 or above";
+
+    valid = false;
+
+  } else {
+
+    document.querySelector("#ageError").textContent = "";
+  }
+
+
+  // Password Validation
+  if (password.value === "") {
+
+    document.querySelector("#passwordError").textContent =
+      "Password is required";
+
+    valid = false;
+
+  } else if (password.value.length < 8) {
+
+    document.querySelector("#passwordError").textContent =
+      "Password must be at least 8 characters";
+
+    valid = false;
+
+  } else {
+
+    document.querySelector("#passwordError").textContent = "";
+  }
+
+
+  // Confirm Password
+  if (confirmPassword.value === "") {
+
+    document.querySelector("#confirmPasswordError").textContent =
+      "Please confirm your password";
+
+    valid = false;
+
+  } else if (confirmPassword.value !== password.value) {
+
+    document.querySelector("#confirmPasswordError").textContent =
+      "Passwords do not match";
+
+    valid = false;
+
+  } else {
+
+    document.querySelector("#confirmPasswordError").textContent = "";
+  }
+
+
+  // Final Result
+  if (valid) {
+
+    alert("Registration successful!");
+
+    form.reset();
+  }
+
+});
+  </script>
+</body>
+</html>
