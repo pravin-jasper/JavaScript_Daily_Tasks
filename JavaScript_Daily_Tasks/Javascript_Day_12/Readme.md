@@ -1,4 +1,4 @@
-# Day-16: Advanced Validation
+# Javascript_Day_12
 
 ## 📌 Overview
 
@@ -37,21 +37,18 @@ These concepts are useful for creating secure, user-friendly, and interactive we
 ## 📂 Folder Structure
 
 ```text
-Day-16-Advanced-Validation/
+Javascript_Day_12
 │
-├── Task-35-Login-Validation/
+├── Task-27
 │   ├── index.html
-│   ├── script.js
 │   └── Output_Screenshots/
 │
-├── Task-36-Character-Counte/
+├── Task-28
 │   ├── index.html
-│   ├── script.js
 │   └── Output_Screenshots/
 │
-└── Task-37-Password-Strength/
+└── Task-29
     ├── index.html
-    ├── script.js
     └── Output_Screenshots/
 ```
 
@@ -59,7 +56,7 @@ Day-16-Advanced-Validation/
 
 # 📚 Tasks
 
-## 🔹 Task-35: Login Validation
+## 🔹 Task-27: Login Validation
 
 ### 📌 Description
 
@@ -102,7 +99,7 @@ The form checks the entered values and displays the appropriate validation messa
 
 ---
 
-## 🔹 Task-37: Password Strength
+## 🔹 Task-28: Password Strength
 
 ### 📌 Description
 
@@ -153,7 +150,7 @@ if (/[^A-Za-z0-9]/.test(password)) {
 The password strength can then be determined based on the number of conditions satisfied.
 
 ---
-
+# Task-29
 # Registration Form Validation
 
 A simple JavaScript form-validation example that checks user input before allowing registration.
@@ -368,9 +365,3 @@ Each task contains an **Output_Screenshots** folder containing the respective ou
 
 ---
 
-### ✅ Day-16 Completed
-
-**Day:** 16
-**Topic:** Advanced Validation
-**Tasks Completed:** 35, 36, 37
-**Status:** Completed
