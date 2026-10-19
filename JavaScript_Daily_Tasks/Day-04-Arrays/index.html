@@ -1,45 +1,369 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 04 - Arrays</title>
-</head>
-<body>
 
-    <nav>
-        <h2>JavaScript Daily Tasks</h2>
+    <title>Day 04 - Arrays | JavaScript Daily Tasks</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-slate-950 text-white transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav class="border-b border-slate-800 bg-slate-900/80">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+
+            <h2 class="text-xl font-bold tracking-wide">
+                <span class="text-cyan-400">JS</span> Daily Tasks
+            </h2>
+
+            <button
+                id="themeBtn"
+                class="rounded-lg border border-slate-700 px-4 py-2 text-sm
+                       transition hover:border-cyan-400 hover:text-cyan-400"
+                aria-label="Toggle light and dark theme"
+            >
+                ☀️ Light Mode
+            </button>
+
+        </div>
     </nav>
 
-    <main>
-        <h1>Day 04 - Arrays</h1>
-        <p>JavaScript practice tasks using Arrays</p>
+    <!-- Main Content -->
+    <main class="mx-auto max-w-6xl px-6 py-16">
 
-        <div>
-            <h3>Task 09</h3>
-            <p>Array Sum</p>
-            <a href="Task-09-Array-Sum/index.html">View Task</a>
+        <!-- Heading -->
+        <section class="mb-12">
+            <p class="mb-3 font-semibold uppercase tracking-[0.3em] text-cyan-400">
+                Day 04 / JavaScript
+            </p>
+
+            <h1 class="mb-4 text-4xl font-extrabold sm:text-5xl">
+                Working with
+                <span class="text-cyan-400">Arrays.</span>
+            </h1>
+
+            <p class="max-w-xl leading-7 text-slate-400">
+                Practice JavaScript array methods, solve coding problems,
+                and strengthen your programming fundamentals one task at a time.
+            </p>
+        </section>
+
+        <!-- Progress -->
+        <section class="mb-10 rounded-2xl border border-slate-800 bg-slate-900 p-6">
+
+            <div class="mb-4 flex items-center justify-between">
+                <div>
+                    <h2 class="font-semibold">Your Practice Plan</h2>
+                    <p class="mt-1 text-sm text-slate-400">
+                        Four tasks to complete
+                    </p>
+                </div>
+
+                <span id="progressText"
+                      class="font-bold text-cyan-400">
+                    0 / 4 completed
+                </span>
+            </div>
+
+            <div class="h-2 overflow-hidden rounded-full bg-slate-800">
+                <div id="progressBar"
+                     class="h-full rounded-full bg-cyan-400 transition-all duration-500"
+                     style="width: 0%">
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Task Cards -->
+        <section>
+            <div class="mb-6 flex flex-wrap items-center justify-between gap-4">
+                <h2 class="text-2xl font-bold">Practice Tasks</h2>
+
+                <p class="text-sm text-slate-400">
+                    Select a task to get started →
+                </p>
+            </div>
+
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+                <!-- Task 09 -->
+                <article class="task-card group rounded-2xl border border-slate-800
+                                bg-slate-900 p-6 transition duration-300
+                                hover:-translate-y-2 hover:border-cyan-400
+                                hover:shadow-xl hover:shadow-cyan-950/30">
+
+                    <div class="mb-6 flex items-center justify-between">
+                        <span class="rounded-lg bg-cyan-400/10 p-3 text-2xl">
+                            ∑
+                        </span>
+                        <span class="text-sm text-slate-500">09</span>
+                    </div>
+
+                    <h3 class="mb-2 text-lg font-bold">Array Sum</h3>
+
+                    <p class="mb-6 min-h-12 text-sm leading-6 text-slate-400">
+                        Calculate the total sum of all numbers in an array.
+                    </p>
+
+                    <a href="Task-09-Array-Sum/index.html"
+                       class="block rounded-lg bg-cyan-400 px-4 py-3 text-center
+                              font-semibold text-slate-950 transition
+                              hover:bg-cyan-300">
+                        View Task ↗
+                    </a>
+
+                    <button data-task="09"
+                            class="complete-btn mt-3 w-full rounded-lg border
+                                   border-slate-700 px-4 py-2 text-sm
+                                   transition hover:border-cyan-400">
+                        Mark Complete
+                    </button>
+                </article>
+
+                <!-- Task 10 -->
+                <article class="task-card group rounded-2xl border border-slate-800
+                                bg-slate-900 p-6 transition duration-300
+                                hover:-translate-y-2 hover:border-cyan-400
+                                hover:shadow-xl hover:shadow-cyan-950/30">
+
+                    <div class="mb-6 flex items-center justify-between">
+                        <span class="rounded-lg bg-purple-400/10 p-3 text-2xl">
+                            ↗
+                        </span>
+                        <span class="text-sm text-slate-500">10</span>
+                    </div>
+
+                    <h3 class="mb-2 text-lg font-bold">Largest Number</h3>
+
+                    <p class="mb-6 min-h-12 text-sm leading-6 text-slate-400">
+                        Find the largest value stored inside an array.
+                    </p>
+
+                    <a href="Task-10-Largest-Number/index.html"
+                       class="block rounded-lg bg-cyan-400 px-4 py-3 text-center
+                              font-semibold text-slate-950 transition
+                              hover:bg-cyan-300">
+                        View Task ↗
+                    </a>
+
+                    <button data-task="10"
+                            class="complete-btn mt-3 w-full rounded-lg border
+                                   border-slate-700 px-4 py-2 text-sm
+                                   transition hover:border-cyan-400">
+                        Mark Complete
+                    </button>
+                </article>
+
+                <!-- Task 11 -->
+                <article class="task-card group rounded-2xl border border-slate-800
+                                bg-slate-900 p-6 transition duration-300
+                                hover:-translate-y-2 hover:border-cyan-400
+                                hover:shadow-xl hover:shadow-cyan-950/30">
+
+                    <div class="mb-6 flex items-center justify-between">
+                        <span class="rounded-lg bg-emerald-400/10 p-3 text-2xl">
+                            []
+                        </span>
+                        <span class="text-sm text-slate-500">11</span>
+                    </div>
+
+                    <h3 class="mb-2 text-lg font-bold">Task 11</h3>
+
+                    <p class="mb-6 min-h-12 text-sm leading-6 text-slate-400">
+                        Add your next JavaScript array challenge here.
+                    </p>
+
+                    <a href="Task-11/index.html"
+                       class="block rounded-lg bg-cyan-400 px-4 py-3 text-center
+                              font-semibold text-slate-950 transition
+                              hover:bg-cyan-300">
+                        View Task ↗
+                    </a>
+
+                    <button data-task="11"
+                            class="complete-btn mt-3 w-full rounded-lg border
+                                   border-slate-700 px-4 py-2 text-sm
+                                   transition hover:border-cyan-400">
+                        Mark Complete
+                    </button>
+                </article>
+
+                <!-- Task 12 -->
+                <article class="task-card group rounded-2xl border border-slate-800
+                                bg-slate-900 p-6 transition duration-300
+                                hover:-translate-y-2 hover:border-cyan-400
+                                hover:shadow-xl hover:shadow-cyan-950/30">
+
+                    <div class="mb-6 flex items-center justify-between">
+                        <span class="rounded-lg bg-orange-400/10 p-3 text-2xl">
+                            ⚡
+                        </span>
+                        <span class="text-sm text-slate-500">12</span>
+                    </div>
+
+                    <h3 class="mb-2 text-lg font-bold">Task 12</h3>
+
+                    <p class="mb-6 min-h-12 text-sm leading-6 text-slate-400">
+                        Practice another array problem and improve your logic.
+                    </p>
+
+                    <a href="Task-12/index.html"
+                       class="block rounded-lg bg-cyan-400 px-4 py-3 text-center
+                              font-semibold text-slate-950 transition
+                              hover:bg-cyan-300">
+                        View Task ↗
+                    </a>
+
+                    <button data-task="12"
+                            class="complete-btn mt-3 w-full rounded-lg border
+                                   border-slate-700 px-4 py-2 text-sm
+                                   transition hover:border-cyan-400">
+                        Mark Complete
+                    </button>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Reset Button -->
+        <div class="mt-8 text-right">
+            <button id="resetBtn"
+                    class="rounded-lg px-4 py-2 text-sm text-slate-400
+                           transition hover:text-red-400">
+                Reset Progress
+            </button>
         </div>
 
-        <div>
-            <h3>Task 10</h3>
-            <p>Largest Number</p>
-            <a href="Task-10-Largest-Number/index.html">View Task</a>
-        </div>
-
-        <div>
-            <h3>Task 11</h3>
-            <p>Task 11</p>
-            <a href="Task-11/index.html">View Task</a>
-        </div>
-
-        <div>
-            <h3>Task 12</h3>
-            <p>Task 12</p>
-            <a href="Task-12/index.html">View Task</a>
-        </div>
     </main>
 
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 px-6 py-6 text-center text-sm text-slate-500">
+        Built with HTML, Tailwind CSS & JavaScript
+        <p class="mt-2">Keep learning. Keep building. 🚀</p>
+    </footer>
+
+    <!-- Lightweight JavaScript -->
+    <script>
+        const themeBtn = document.getElementById("themeBtn");
+        const progressText = document.getElementById("progressText");
+        const progressBar = document.getElementById("progressBar");
+        const completeButtons = document.querySelectorAll(".complete-btn");
+        const resetBtn = document.getElementById("resetBtn");
+
+        let completedTasks = JSON.parse(
+            localStorage.getItem("completedTasks") || "[]"
+        );
+
+        // Update task buttons and progress
+        function updateProgress() {
+            completeButtons.forEach(button => {
+                const isCompleted = completedTasks.includes(button.dataset.task);
+
+                button.textContent = isCompleted
+                    ? "✓ Completed"
+                    : "Mark Complete";
+
+                button.classList.toggle("bg-cyan-400", isCompleted);
+                button.classList.toggle("text-slate-950", isCompleted);
+            });
+
+            const total = completeButtons.length;
+            const completed = completedTasks.length;
+            const percentage = (completed / total) * 100;
+
+            progressText.textContent = `${completed} / ${total} completed`;
+            progressBar.style.width = `${percentage}%`;
+
+            localStorage.setItem(
+                "completedTasks",
+                JSON.stringify(completedTasks)
+            );
+        }
+
+        // Mark tasks complete or incomplete
+        completeButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const task = button.dataset.task;
+
+                if (completedTasks.includes(task)) {
+                    completedTasks = completedTasks.filter(
+                        item => item !== task
+                    );
+                } else {
+                    completedTasks.push(task);
+                }
+
+                updateProgress();
+            });
+        });
+
+        // Light and dark theme toggle
+        themeBtn.addEventListener("click", () => {
+            document.body.classList.toggle("light-mode");
+
+            const isLight = document.body.classList.contains("light-mode");
+
+            document.body.classList.toggle("bg-slate-950", !isLight);
+            document.body.classList.toggle("text-white", !isLight);
+            document.body.classList.toggle("bg-slate-100", isLight);
+            document.body.classList.toggle("text-slate-900", isLight);
+
+            themeBtn.textContent = isLight
+                ? "🌙 Dark Mode"
+                : "☀️ Light Mode";
+        });
+
+        // Reset all progress
+        resetBtn.addEventListener("click", () => {
+            if (confirm("Are you sure you want to reset your progress?")) {
+                completedTasks = [];
+                updateProgress();
+            }
+        });
+
+        // Load saved progress
+        updateProgress();
+    </script>
+
+    <!-- Additional light-theme styling -->
+    <style>
+        .light-mode nav,
+        .light-mode article,
+        .light-mode section.rounded-2xl {
+            background-color: #ffffff;
+            border-color: #e2e8f0;
+        }
+
+        .light-mode .text-slate-400 {
+            color: #64748b;
+        }
+
+        .light-mode .text-slate-500 {
+            color: #64748b;
+        }
+
+        .light-mode .border-slate-700 {
+            border-color: #cbd5e1;
+        }
+
+        .light-mode .bg-slate-800 {
+            background-color: #e2e8f0;
+        }
+
+        .light-mode .bg-slate-900 {
+            background-color: #ffffff;
+        }
+
+        .light-mode footer {
+            border-color: #e2e8f0;
+        }
+    </style>
 
 </body>
 </html>
+```
