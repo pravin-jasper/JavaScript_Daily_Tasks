@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remember Theme</title>
+</head>
+<body>
+    <center><br><br>
+    <h1>Theme Selector</h1>
+
+    <button onclick="lightTheme()">Light</button>
+
+    <button onclick="darkTheme()">Dark</button>
+
+    <script>
+        let savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+}
+
+function lightTheme() {
+
+    document.body.style.backgroundColor = "white";
+    document.body.style.color = "black";
+
+    localStorage.setItem("theme", "light");
+}
+
+function darkTheme() {
+
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+
+    localStorage.setItem("theme", "dark");
+}
+    </script>
+
+</body>
+</html>
