@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Remove Name</title>
+</head>
+<body>
+    <center><br><br>
+    <h1>Username</h1>
+
+    <input type="text" id="username" placeholder="Enter username">
+
+    <button onclick="saveName()">Save</button>
+
+    <button onclick="removeName()">Remove</button>
+
+    <h2 id="message"></h2>
+
+    <script>
+        let savedName = localStorage.getItem("username");
+
+if (savedName) {
+    document.getElementById("message").innerText =
+        "Welcome, " + savedName + "!";
+}
+
+function saveName() {
+
+    let username = document.getElementById("username").value;
+
+    localStorage.setItem("username", username);
+
+    document.getElementById("message").innerText =
+        "Welcome, " + username + "!";
+}
+
+function removeName() {
+
+    localStorage.removeItem("username");
+
+    document.getElementById("message").innerText =
+        "Username Removed";
+}
+    </script>
+
+</body>
+</html>
