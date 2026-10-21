@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 04 - Arrays | JavaScript Daily Tasks</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-slate-950 text-slate-100">
+
+    <!-- Navigation -->
+    <nav class="border-b border-slate-800 bg-slate-900">
+        <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
+            <h2 class="text-xl font-bold text-cyan-400">
+                JavaScript Daily Tasks
+            </h2>
+
+            <span class="rounded-full bg-cyan-400/10 px-3 py-1 text-sm text-cyan-300">
+                Day 04
+            </span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="mx-auto max-w-5xl px-6 py-12">
+
+        <section class="mb-10">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-cyan-400">
+                Daily Practice
+            </p>
+
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
+                Arrays <span class="text-cyan-400">Practice</span>
+            </h1>
+
+            <p class="max-w-xl text-slate-400">
+                Improve your JavaScript skills with these array-based coding tasks.
+                Choose a task below to get started.
+            </p>
+        </section>
+
+        <!-- Search -->
+        <div class="mb-8">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search tasks..."
+                aria-label="Search tasks"
+                class="w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-white outline-none transition focus:border-cyan-400"
+            >
+        </div>
+
+        <!-- Task Cards -->
+        <section id="taskContainer"
+            class="grid gap-5 sm:grid-cols-2">
+
+            <article data-task="task 09 array sum"
+                class="task-card rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-400">
+
+                <span class="text-sm font-semibold text-cyan-400">
+                    TASK 09
+                </span>
+
+                <h2 class="mb-2 mt-3 text-xl font-bold">Array Sum</h2>
+
+                <p class="mb-6 text-sm text-slate-400">
+                    Calculate the sum of array elements.
+                </p>
+
+                <a href="Task-09-Array-Sum/index.html"
+                    class="inline-flex items-center rounded-lg bg-cyan-400 px-4 py-2 font-semibold text-slate-950 transition hover:bg-cyan-300">
+                    View Task <span class="ml-2">→</span>
+                </a>
+            </article>
+
+            <article data-task="task 10 largest number"
+                class="task-card rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-400">
+
+                <span class="text-sm font-semibold text-cyan-400">
+                    TASK 10
+                </span>
+
+                <h2 class="mb-2 mt-3 text-xl font-bold">Largest Number</h2>
+
+                <p class="mb-6 text-sm text-slate-400">
+                    Find the largest value in an array.
+                </p>
+
+                <a href="Task-10-Largest-Number/index.html"
+                    class="inline-flex items-center rounded-lg bg-cyan-400 px-4 py-2 font-semibold text-slate-950 transition hover:bg-cyan-300">
+                    View Task <span class="ml-2">→</span>
+                </a>
+            </article>
+
+            <article data-task="task 11"
+                class="task-card rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-400">
+
+                <span class="text-sm font-semibold text-cyan-400">
+                    TASK 11
+                </span>
+
+                <h2 class="mb-2 mt-3 text-xl font-bold">Task 11</h2>
+
+                <p class="mb-6 text-sm text-slate-400">
+                    Practice your next JavaScript array challenge.
+                </p>
+
+                <a href="Task-11/index.html"
+                    class="inline-flex items-center rounded-lg bg-cyan-400 px-4 py-2 font-semibold text-slate-950 transition hover:bg-cyan-300">
+                    View Task <span class="ml-2">→</span>
+                </a>
+            </article>
+
+            <article data-task="task 12"
+                class="task-card rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-400">
+
+                <span class="text-sm font-semibold text-cyan-400">
+                    TASK 12
+                </span>
+
+                <h2 class="mb-2 mt-3 text-xl font-bold">Task 12</h2>
+
+                <p class="mb-6 text-sm text-slate-400">
+                    Continue learning JavaScript arrays.
+                </p>
+
+                <a href="Task-12/index.html"
+                    class="inline-flex items-center rounded-lg bg-cyan-400 px-4 py-2 font-semibold text-slate-950 transition hover:bg-cyan-300">
+                    View Task <span class="ml-2">→</span>
+                </a>
+            </article>
+
+        </section>
+
+        <p id="emptyMessage" class="mt-8 hidden text-center text-slate-400">
+            No tasks found.
+        </p>
+
+        <p id="taskCount" class="mt-8 text-sm text-slate-500">
+            Showing 4 tasks
+        </p>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-6 text-center text-sm text-slate-500">
+        JavaScript Daily Tasks · Day 04 - Arrays
+    </footer>
+
+    <!-- Lightweight JavaScript -->
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const taskCards = document.querySelectorAll(".task-card");
+        const taskCount = document.getElementById("taskCount");
+        const emptyMessage = document.getElementById("emptyMessage");
+
+        searchInput.addEventListener("input", function () {
+            const searchText = this.value.toLowerCase().trim();
+            let visibleTasks = 0;
+
+            taskCards.forEach(function (card) {
+                const taskName = card.dataset.task.toLowerCase();
+                const isVisible = taskName.includes(searchText);
+
+                card.classList.toggle("hidden", !isVisible);
+
+                if (isVisible) {
+                    visibleTasks++;
+                }
+            });
+
+            taskCount.textContent =
+                `Showing ${visibleTasks} of ${taskCards.length} tasks`;
+
+            emptyMessage.classList.toggle("hidden", visibleTasks !== 0);
+        });
+    </script>
+
+</body>
+</html>
