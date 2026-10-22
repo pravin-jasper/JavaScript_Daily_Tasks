@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Error</title>
+</head>
+<body>
+    <center><br><br>
+    <h1>Users</h1>
+
+    <button onclick="getUsers()">Load Users</button>
+
+    <p id="message"></p>
+
+    <li id="userList"></li>
+
+    <script>
+        function getUsers() {
+
+    let message = document.getElementById("message");
+    let list = document.getElementById("userList");
+
+    message.innerText = "Loading...";
+
+    list.innerHTML = "";
+
+    fetch("https://jsonplaceholder.typicode.com/users")
+
+        .then(function(response) {
+
+            if (!response.ok) {
+                throw new Error("Something went wrong");
+            }
+
+            return response.json();
+        })
+
+        .then(function(users) {
+
+            message.innerText = "Users loaded successfully";
+
+            users.forEach(function(user) {
+
+                let li = document.createElement("li");
+
+                li.innerText = user.name;
+
+                list.appendChild(li);
+            });
+        })
+
+        .catch(function(error) {
+
+            message.innerText = "Failed to load users";
+
+            console.log(error);
+        });
+}
+    </script>
+
+</body>
+</html>
