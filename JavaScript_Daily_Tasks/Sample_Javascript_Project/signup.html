@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Create account — Careerly</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="assets/css/styles.css" />
+   </head>
+   <body data-page="signup" class="bg-slate-50 text-slate-900">
+      <div id="app-header"></div>
+      <main class="mx-auto max-w-md px-5 py-14">
+         <div
+            class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm"
+         >
+            <div class="text-center">
+               <div
+                  class="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-indigo-100 text-2xl"
+               >
+                  ✦
+               </div>
+               <h1 class="mt-4 text-3xl font-extrabold">Create your account</h1>
+               <p class="mt-2 text-slate-500">
+                  Save jobs and organise your next move.
+               </p>
+            </div>
+            <form id="signup-form" class="mt-8 space-y-4" novalidate>
+               <label class="block text-sm font-semibold"
+                  >Full name<input
+                     class="field mt-2"
+                     id="signup-name"
+                     required
+                     minlength="2"
+                     placeholder="Alex Morgan" /></label
+               ><label class="block text-sm font-semibold"
+                  >Email address<input
+                     class="field mt-2"
+                     type="email"
+                     id="signup-email"
+                     required
+                     placeholder="you@example.com" /></label
+               ><label class="block text-sm font-semibold"
+                  >Password<input
+                     class="field mt-2"
+                     type="password"
+                     id="signup-password"
+                     required
+                     minlength="8"
+                     placeholder="At least 8 characters" /></label
+               ><label class="block text-sm font-semibold"
+                  >Confirm password<input
+                     class="field mt-2"
+                     type="password"
+                     id="signup-confirm"
+                     required
+                     placeholder="Repeat password"
+               /></label>
+               <p id="signup-message" class="text-sm" role="status"></p>
+               <button
+                  class="w-full rounded-xl bg-indigo-600 px-4 py-3 font-bold text-white hover:bg-indigo-700"
+               >
+                  Create account
+               </button>
+            </form>
+            <p class="mt-6 text-center text-sm text-slate-500">
+               Already registered?
+               <a href="login.html" class="font-semibold text-indigo-600"
+                  >Log in</a
+               >
+            </p>
+            <p class="mt-4 text-xs text-slate-400">
+               Learning project: account data is stored locally in this browser
+               only.
+            </p>
+         </div>
+      </main>
+      <div id="app-footer"></div>
+      <script src="assets/js/app.js"></script>
+   </body>
+</html>
