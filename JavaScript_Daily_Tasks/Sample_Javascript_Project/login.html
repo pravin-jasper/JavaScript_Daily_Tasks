@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Log in — Careerly</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="assets/css/styles.css" />
+   </head>
+   <body data-page="login" class="bg-slate-50 text-slate-900">
+      <div id="app-header"></div>
+      <main class="mx-auto max-w-md px-5 py-14">
+         <div
+            class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm"
+         >
+            <div class="text-center">
+               <div
+                  class="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-indigo-100 text-2xl"
+               >
+                  ✦
+               </div>
+               <h1 class="mt-4 text-3xl font-extrabold">Welcome back</h1>
+               <p class="mt-2 text-slate-500">
+                  Log in to continue your job search.
+               </p>
+            </div>
+            <form id="login-form" class="mt-8 space-y-4" novalidate>
+               <label class="block text-sm font-semibold"
+                  >Email address<input
+                     class="field mt-2"
+                     type="email"
+                     id="login-email"
+                     required
+                     placeholder="you@example.com" /></label
+               ><label class="block text-sm font-semibold"
+                  >Password<input
+                     class="field mt-2"
+                     type="password"
+                     id="login-password"
+                     required
+                     minlength="6"
+                     placeholder="At least 6 characters"
+               /></label>
+               <p id="login-message" class="text-sm" role="status"></p>
+               <button
+                  class="w-full rounded-xl bg-indigo-600 px-4 py-3 font-bold text-white hover:bg-indigo-700"
+               >
+                  Log in
+               </button>
+            </form>
+            <p class="mt-6 text-center text-sm text-slate-500">
+               New to Careerly?
+               <a href="signup.html" class="font-semibold text-indigo-600"
+                  >Create an account</a
+               >
+            </p>
+            <p class="mt-4 text-xs text-slate-400">
+               Demo authentication uses localStorage only. Do not use a real
+               password.
+            </p>
+         </div>
+      </main>
+      <div id="app-footer"></div>
+      <script src="assets/js/app.js"></script>
+   </body>
+</html>
