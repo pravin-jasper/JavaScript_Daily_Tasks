@@ -1,1 +1,47 @@
-.hero-gradient{background:radial-gradient(circle at 80% 15%,rgba(34,211,238,.24),transparent 30%),linear-gradient(120deg,#312e81 0%,#4338ca 52%,#0e7490 100%)}.field{display:block;width:100%;border:1px solid #cbd5e1;border-radius:.75rem;background:white;padding:.75rem .9rem;font-weight:400;outline:none}.field:focus{border-color:#6366f1;box-shadow:0 0 0 3px rgba(99,102,241,.13)}.skeleton{height:190px;border-radius:1rem;background:linear-gradient(90deg,#e2e8f0 25%,#f8fafc 50%,#e2e8f0 75%);background-size:200% 100%;animation:shimmer 1.4s infinite}@keyframes shimmer{to{background-position:-200% 0}}.job-card{transition:transform .18s ease,box-shadow .18s ease}.job-card:hover{transform:translateY(-2px);box-shadow:0 14px 35px rgba(15,23,42,.08)}.line-clamp-3{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.hero-gradient {
+  background: radial-gradient(
+      circle at 80% 15%,
+      rgba(34, 211, 238, 0.24),
+      transparent 30%
+    ),
+    linear-gradient(120deg, #312e81 0%, #4338ca 52%, #0e7490 100%);
+}
+.field {
+  display: block;
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.75rem;
+  background: white;
+  padding: 0.75rem 0.9rem;
+  font-weight: 400;
+  outline: none;
+}
+.field:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.13);
+}
+.skeleton {
+  height: 190px;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, #e2e8f0 25%, #f8fafc 50%, #e2e8f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+.job-card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.job-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
