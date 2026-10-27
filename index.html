@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Daily Tasks | Home</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-slate-950 text-slate-100">
+
+    <!-- Navbar -->
+    <nav class="border-b border-slate-800 bg-slate-900">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+            <a href="./index.html" class="text-xl font-bold text-cyan-400">
+                JavaScript Daily Tasks
+            </a>
+
+            <span class="rounded-full bg-cyan-400/10 px-3 py-1 text-sm text-cyan-300">
+                Home
+            </span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="mx-auto max-w-6xl px-6 py-12">
+
+        <!-- Heading -->
+        <section class="mb-10">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-cyan-400">
+                Coding Practice Repository
+            </p>
+
+            <h1 class="mb-4 text-4xl font-extrabold sm:text-5xl">
+                JavaScript <span class="text-cyan-400">Dashboard</span>
+            </h1>
+
+            <p class="max-w-2xl leading-7 text-slate-400">
+                Welcome to your JavaScript Daily Tasks repository.
+                Choose a day or project below to access its index page,
+                coding challenges, and available resources.
+            </p>
+
+            <div class="mt-6 flex flex-wrap gap-3">
+                <span class="rounded-xl border border-slate-800 bg-slate-900 px-4 py-3 text-sm text-slate-300">
+                    15 Day / Topic Folders
+                </span>
+
+                <span class="rounded-xl border border-slate-800 bg-slate-900 px-4 py-3 text-sm text-slate-300">
+                    1 Sample Project
+                </span>
+            </div>
+        </section>
+
+        <!-- Search -->
+        <section class="mb-8">
+            <label for="searchInput"
+                   class="mb-2 block text-sm font-medium text-slate-300">
+                Search Days and Projects
+            </label>
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search Day 10, Arrays, Conditions, Sample Project..."
+                aria-label="Search days and projects"
+                class="w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+            >
+        </section>
+
+        <!-- Folder Cards -->
+        <section
+            id="folderContainer"
+            class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+            aria-label="JavaScript day folders">
+
+            <!-- Day 1 -->
+            <article data-folder="day 1 condition conditions javascript"
+                     class="folder-card rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-400">
+                <span class="mb-4 inline-block rounded-lg bg-cyan-400/10 px-3 py-2 text-sm font-semibold text-cyan-400">
+                    DAY 01
+                </span>
+                <h2 class="mb-3 text-xl font-bold">JavaScript Day 1</h2>
+                <p class="mb-6 text-sm leading-6 text-slate-400">
+                    JavaScript condition practice.
+                </p>
+                <a href="./JavaScript_Day_1_Condition/index.html"
+                   class="inline-flex rounded-xl bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300">
+                    Open Folder →
+                </a>
+                <p class="mt-4 break-all text-xs text-slate-500">JavaScript_Day_1_Condition/</p>
+            </article>
+
+            <!-- Day 2 -->
+            <article data-folder="day 2 javascript"
+                     class="folder-card rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-400">
+                <span class="mb-4 inline-block rounded-lg bg-cyan-400/10 px-3 py-2 text-sm font-semibold text-cyan-400">
+                    DAY 02
+                </span>
+                <h2 class="mb-3 text-xl font-bold">JavaScript Day 2</h2>
+                <p class="mb-6 text-sm leading-6 text-slate-400">
+                    Continue your JavaScript daily coding exercises.
+                </p>
+                <a href="./Javascript_Day-2/index.html"
+                   class="inline-flex rounded-xl bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300">
+                    Open Folder →
+                </a>
+                <p class="mt-4 break-all text-xs text-slate-500">Javascript_Day-2/</p>
+            </article>
+
+            <!-- Day 3 -->
+            <article data-folder="day 3 javascript"
+                     class="folder-card rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-400">
+                <span class="mb-4 inline-block rounded-lg bg-cyan-400/10 px-3 py-2 text-sm font-semibold text-cyan-400">
+                    DAY 03
+                </span>
+                <h2 class="mb-3 text-xl font-bold">JavaScript Day 3</h2>
+                <p class="mb-6 text-sm leading-6 text-slate-400">
+                    Explore Day 3 tasks and coding examples.
+                </p>
+                <a href="./Javascript_Day_3/index.html"
+                   class="inline-flex rounded-xl bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300">
+                    Open Folder →
+                </a>
+                <p class="mt-4 break-all text-xs text-slate-500">Javascript_Day_3/</p>
+            </article>
+
+            <!-- Day 4 Arrays -->
+            <article data-folder="day 4 arrays array javascript"
+                     class="folder-card rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-400">
+                <span class="mb-4 inline-block rounded-lg bg-cyan-400/10 px-3 py-2 text-sm font-semibold text-cyan-400">
+                    DAY 04
+                </span>
+                <h2 class="mb-3 text-xl font-bold">Day 4 - Arrays</h2>
+                <p class="mb-6 text-sm leading-6 text-slate-400">
+                    Practice JavaScript array concepts and exercises.
+                </p>
+                <a href="./Day-04-Arrays/index.html"
+                   class="inline-flex rounded-xl bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300">
+                    Open Folder →
+                </a>
+                <p class="mt-4 break-all text-xs text-slate-500">Day-04-Arrays/</p>
+            </article>
+
+            <!-- Day 5 -->
+            <article data-folder="day 5 javascript"
+                     class="folder-card rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-400">
+                <span class="mb-4 inline-block rounded-lg bg-cyan-400/10 px-3 py-2 text-sm font-semibold text-cyan-400">
+                    DAY 05
+                </span>
+                <h2 class="mb-3 text-xl font-bold">JavaScript Day 5</h2>
+                <p class="mb-6 text-sm leading-6 text-slate-400">
+                    Access Day 5 coding challenges.
+                </p>
+                <a href="./Javascript_Day_5/index.html"
+                   class="inline-flex rounded-xl bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300">
+                    Open Folder →
+                </a>
+                <p class="mt-4 break-all text-xs text-slate-500">Javascript_Day_5/</p>
+            </article>
+
+            <!-- Day 6 -->
+            <article data-folder="day 6 javascript"
+                     class="folder-card rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-400">
+                <span class="mb-4 inline-block rounded-lg bg-cyan-400/10 px-3 py-2 text-sm font-semibold text-cyan-400">
+                    DAY 06
+                </span>
+                <h2 class="mb-3 text-xl font-bold">JavaScript Day 6</h2>
+                <p class="mb-6 text-sm leading-6 text-slate-400">
+                    Open Day 6 and explore the available tasks.
+                </p>
+                <a href="./Javascript-Day-6/index.html"
+                   class="inline-flex rounded-xl bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300">
+                    Open Folder →
+                </a>
+                <p class="mt-4 break-all text-xs text-slate-500">Javascript-Day-6/</p>
+            </article>
+
+            <!-- Day 7 -->
+            <article data-folder="day 7 javascript"
+                     class="folder-card rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-400">
+                <span class="mb-4 inline-block rounded-lg bg-cyan-400/10 px-3 py-2 text-sm font-semibold text-cyan-400">
+                    DAY 07
+                </span>
+                <h2 class="mb-3 text-xl font-bold">JavaScript Day 7</h2>
+                <p class="mb-6 text-sm leading-6 text-slate-400">
+                    Access Day 7 JavaScript practice tasks.
+                </p>
+                <a href="./Javascript_Day_7/index.html"
+                   class="inline-flex rounded-xl bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300">
+                    Open Folder →
+                </a>
+                <p class="mt-4 break-all text-xs text-slate-500">Javascript_Day_7/</p>
+            </article>
+
+            <!-- Day 8 -->
+            <article data-folder="day 8 javascript"
+                     class="folder-card rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-400">
+                <span class="mb-4 inline-block rounded-lg bg-cyan-400/10 px-3 py-2 text-sm font-semibold text-cyan-400">
+                    DAY 08
+                </span>
+                <h2 class="mb-3 text-xl font-bold">JavaScript Day 8</h2>
+                <p class="mb-6 text-sm leading-6 text-slate-400">
+                    Access Day 8 JavaScript practice tasks.
+                </p>
+                <a href="./Javascript_Day_8/index.html"
+                   class="inline-flex rounded-xl bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300">
+                    Open Folder →
+                </a>
+                <p class="mt-4 break-all text-xs text-slate-500">Javascript_Day_8/</p>
+            </article>
+
+            <!-- Day 9 -->
+            <article data-folder="day 9 javascript"
+                     class="folder-card rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-400">
+                <span class="mb-4 inline-block rounded-lg bg-cyan-400/10 px-3 py-2 text-sm font-semibold text-cyan-400">
+                    DAY 09
+                </span>
+                <h2 class="mb-3 text-xl font-bold">JavaScript Day 9</h2>
+                <p class="mb-6 text-sm leading-6 text-slate-400">
+                    Open Day 9 tasks and their associated resources.
+                </p>
+                <a href="./Javascript_Day_9/index.html"
+                   class="inline-flex rounded-xl bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300">
+                    Open Folder →
+                </a>
+                <p class="mt-4 break-all text-xs text-slate-500">Javascript_Day_9/</p>
+            </article>
+
+            <!-- Day 10 -->
+            <article data-folder="day 10 javascript"
+                     class="folder-card rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-400">
+                <span class="mb-4 inline-block rounded-lg bg-cyan-400/10 px-3 py-2 text-sm font-semibold text-cyan-400">
+                    DAY 10
+                </span>
+                <h2 class="mb-3 text-xl font-bold">JavaScript Day 10</h2>
+                <p class="mb-6 text-sm leading-6 text-slate-400">
+                    Open the Day 10 task index.
+                </p>
+                <a href="./Javascript_Day_10/index.html"
+                   class="inline-flex rounded-xl bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300">
+                    Open Folder →
+                </a>
+                <p class="mt-4 break-all text-xs text-slate-500">Javascript_Day_10/</p>
+            </article>
+
+            <!-- Day 11 -->
+            <article data-folder="day 11 javascript"
+                     class="folder-card rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-400">
+                <span class="mb-4 inline-block rounded-lg bg-cyan-400/10 px-3 py-2 text-sm font-semibold text-cyan-400">
+                    DAY 11
+                </span>
+                <h2 class="mb-3 text-xl font-bold">JavaScript Day 11</h2>
+                <p class="mb-6 text-sm leading-6 text-slate-400">
+                    Open the Day 11 task index.
+                </p>
+                <a href="./Javascript_Day_11/index.html"
+                   class="inline-flex rounded-xl bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300">
+                    Open Folder →
+                </a>
+                <p class="mt-4 break-all text-xs text-slate-500">Javascript_Day_11/</p>
+            </article>
+
+            <!-- Day 12 -->
+            <article data-folder="day 12 javascript"
+                     class="folder-card rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-400">
+                <span class="mb-4 inline-block rounded-lg bg-cyan-400/10 px-3 py-2 text-sm font-semibold text-cyan-400">
+                    DAY 12
+                </span>
+                <h2 class="mb-3 text-xl font-bold">JavaScript Day 12</h2>
+                <p class="mb-6 text-sm leading-6 text-slate-400">
+                    Open the Day 12 task index.
+                </p>
+                <a href="./Javascript_Day_12/index.html"
+                   class="inline-flex rounded-xl bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300">
+                    Open Folder →
+                </a>
+                <p class="mt-4 break-all text-xs text-slate-500">Javascript_Day_12/</p>
+            </article>
+
+            <!-- Day 13 -->
+            <article data-folder="day 13 javascript"
+                     class="folder-card rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-400">
+                <span class="mb-4 inline-block rounded-lg bg-cyan-400/10 px-3 py-2 text-sm font-semibold text-cyan-400">
+                    DAY 13
+                </span>
+                <h2 class="mb-3 text-xl font-bold">JavaScript Day 13</h2>
+                <p class="mb-6 text-sm leading-6 text-slate-400">
+                    Open the Day 13 task index.
+                </p>
+                <a href="./Javascript_Day_13/index.html"
+                   class="inline-flex rounded-xl bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300">
+                    Open Folder →
+                </a>
+                <p class="mt-4 break-all text-xs text-slate-500">Javascript_Day_13/</p>
+            </article>
+
+            <!-- Day 14 -->
+            <article data-folder="day 14 javascript"
+                     class="folder-card rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-400">
+                <span class="mb-4 inline-block rounded-lg bg-cyan-400/10 px-3 py-2 text-sm font-semibold text-cyan-400">
+                    DAY 14
+                </span>
+                <h2 class="mb-3 text-xl font-bold">JavaScript Day 14</h2>
+                <p class="mb-6 text-sm leading-6 text-slate-400">
+                    Open the Day 14 task index.
+                </p>
+                <a href="./Javascript_Day_14/index.html"
+                   class="inline-flex rounded-xl bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300">
+                    Open Folder →
+                </a>
+                <p class="mt-4 break-all text-xs text-slate-500">Javascript_Day_14/</p>
+            </article>
+
+            <!-- Day 15 -->
+            <article data-folder="day 15 javascript"
+                     class="folder-card rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-400">
+                <span class="mb-4 inline-block rounded-lg bg-cyan-400/10 px-3 py-2 text-sm font-semibold text-cyan-400">
+                    DAY 15
+                </span>
+                <h2 class="mb-3 text-xl font-bold">JavaScript Day 15</h2>
+                <p class="mb-6 text-sm leading-6 text-slate-400">
+                    Open the Day 15 task index.
+                </p>
+                <a href="./Javascript_Day_15/index.html"
+                   class="inline-flex rounded-xl bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300">
+                    Open Folder →
+                </a>
+                <p class="mt-4 break-all text-xs text-slate-500">Javascript_Day_15/</p>
+            </article>
+
+            <!-- Sample Project -->
+            <article data-folder="sample javascript project project example"
+                     class="folder-card rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-400">
+                <span class="mb-4 inline-block rounded-lg bg-violet-400/10 px-3 py-2 text-sm font-semibold text-violet-300">
+                    PROJECT
+                </span>
+                <h2 class="mb-3 text-xl font-bold">Sample JavaScript Project</h2>
+                <p class="mb-6 text-sm leading-6 text-slate-400">
+                    Explore the sample project and its available files.
+                </p>
+                <a href="./Sample_Javascript_Project/index.html"
+                   class="inline-flex rounded-xl bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300">
+                    Open Project →
+                </a>
+                <p class="mt-4 break-all text-xs text-slate-500">Sample_Javascript_Project/</p>
+            </article>
+
+        </section>
+
+        <!-- Search Feedback -->
+        <p id="emptyMessage"
+           class="mt-8 hidden text-center text-slate-400"
+           role="status">
+            No folders found. Try another search.
+        </p>
+
+        <!-- Folder Count -->
+        <p id="folderCount"
+           class="mt-8 text-sm text-slate-500"
+           aria-live="polite">
+            Showing 16 folders and projects
+        </p>
+
+        <!-- Repository Information -->
+        <section class="mt-12 rounded-2xl border border-slate-800 bg-slate-900 p-6">
+            <h2 class="mb-3 text-xl font-bold text-cyan-400">
+                Repository Information
+            </h2>
+
+            <p class="mb-5 leading-7 text-slate-400">
+                This dashboard is the main entry point for your JavaScript
+                Daily Tasks repository. Keep this index.html in the
+                JavaScript_Daily_Tasks root folder. Each card opens the
+                index.html file in its corresponding folder.
+            </p>
+
+            <a
+                href="https://github.com/pravin-jasper/JavaScript_Daily_Tasks/tree/main/JavaScript_Daily_Tasks"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex rounded-xl border border-slate-700 px-5 py-3 font-semibold text-slate-200 transition hover:border-cyan-400 hover:text-cyan-400">
+                View Repository on GitHub ↗
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-6 text-center text-sm text-slate-500">
+        JavaScript Daily Tasks · Main Dashboard
+    </footer>
+
+    <!-- Search Functionality -->
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const folderCards = document.querySelectorAll(".folder-card");
+        const folderContainer = document.getElementById("folderContainer");
+        const folderCount = document.getElementById("folderCount");
+        const emptyMessage = document.getElementById("emptyMessage");
+
+        function filterFolders() {
+            const searchText = searchInput.value.toLowerCase().trim();
+            let visibleFolders = 0;
+
+            folderCards.forEach(function (card) {
+                const searchableText = (
+                    card.dataset.folder + " " + card.textContent
+                ).toLowerCase();
+
+                const isVisible = searchableText.includes(searchText);
+
+                card.classList.toggle("hidden", !isVisible);
+
+                if (isVisible) {
+                    visibleFolders++;
+                }
+            });
+
+            folderCount.textContent = searchText === ""
+                ? `Showing ${visibleFolders} folders and projects`
+                : `Showing ${visibleFolders} of ${folderCards.length} folders and projects`;
+
+            emptyMessage.classList.toggle("hidden", visibleFolders !== 0);
+            folderContainer.classList.toggle("hidden", visibleFolders === 0);
+        }
+
+        searchInput.addEventListener("input", filterFolders);
+    </script>
+
+</body>
+</html>
