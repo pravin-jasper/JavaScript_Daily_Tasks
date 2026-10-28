@@ -1,8 +1,8 @@
-# JavaScript Daily Tasks 🚀
+# JavaScript Daily Tasks 
 
 A hands-on JavaScript learning repository covering core language concepts, arrays and strings, DOM manipulation, events, form validation, browser storage, CRUD operations, and API integration. The repository is organized into day-wise folders so you can study concepts, run examples, and build projects step by step.
 
-## 📚 Topics Covered
+## Topics Covered
 
 ### 1. JavaScript Fundamentals
 - Variables and data types
@@ -63,7 +63,7 @@ A CRUD project can combine forms, DOM rendering, validation, arrays of objects, 
 - Displaying API data in the DOM
 - Handling loading and error states
 
-## 🗂️ Repository Structure
+## Repository Structure
 
 The repository contains day-wise practice folders and a sample project. Folder names are listed as they appear in the repository:
 
@@ -91,7 +91,7 @@ JavaScript_Daily_Tasks/
 
 > The folders above reflect the known repository listing. Add or remove entries in this diagram if your GitHub repository changes. The topic-to-day mapping may vary depending on the exercises saved in each folder.
 
-## ▶️ How to Run the Tasks
+## How to Run the Tasks
 
 1. Clone or download the repository.
 
@@ -106,11 +106,11 @@ JavaScript_Daily_Tasks/
 
 Some tasks may contain only JavaScript files or may use a different entry-file name. In those cases, follow the files available inside that task folder.
 
-## 🧭 Using the Main Dashboard
+##  Using the Main Dashboard
 
 If the repository's main `index.html` dashboard is present, open it to browse the available day folders and tasks. If a folder link does not open, check that the folder contains the target `index.html` file and that the relative path in the dashboard matches the actual folder name.
 
-## 💡 Suggested Practice Projects
+##  Suggested Practice Projects
 
 Use the concepts above in small projects, increasing the difficulty gradually:
 
@@ -122,7 +122,7 @@ Use the concepts above in small projects, increasing the difficulty gradually:
 6. **Student or Contact Manager** — build a CRUD interface with form validation and persistent browser storage.
 7. **API Data Explorer** — fetch data from a public API and show loading, success, and error states.
 
-## ✅ Recommended Learning Order
+## Recommended Learning Order
 
 1. Variables, operators, conditions, and loops
 2. Functions and objects
@@ -135,7 +135,7 @@ Use the concepts above in small projects, increasing the difficulty gradually:
 9. Fetch API, promises, and `async`/`await`
 10. Combine the concepts in a complete project
 
-## 🛠️ Technologies
+##  Technologies
 
 - HTML5
 - CSS3
@@ -144,11 +144,11 @@ Use the concepts above in small projects, increasing the difficulty gradually:
 - `localStorage`
 - Fetch API
 
-## 🎯 Goal
+##  Goal
 
 Build a strong JavaScript foundation through consistent practice, understand how JavaScript interacts with web pages, and apply the concepts in practical browser-based applications.
 
-## 🔗 Repository
+##  Repository
 
 [JavaScript_Daily_Tasks on GitHub](https://github.com/pravin-jasper/JavaScript_Daily_Tasks)
 
